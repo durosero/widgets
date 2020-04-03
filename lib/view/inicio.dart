@@ -54,31 +54,25 @@ class Inicio extends StatelessWidget {
   Widget _acciones(){
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
 
-          Column(
-            children: <Widget>[
-              Icon(Icons.call,color: Colors.blue,),
-              Text("Llamar",style: TextStyle(color: Colors.blue),)
-            ],
-          ),
+          _crearAccion(Icons.call,"Llamar"),
+          _crearAccion(Icons.near_me,"Ubicacion"),
+          _crearAccion(Icons.share,"Compartir"),
 
-          Column(
-            children: <Widget>[
-              Icon(Icons.near_me,color: Colors.blue,),
-              Text("Llamar",style: TextStyle(color: Colors.blue),)
-            ],
-          ),
-          
-          Column(
-            children: <Widget>[
-              Icon(Icons.share,color: Colors.blue,),
-              Text("Llamar",style: TextStyle(color: Colors.blue),)
-            ],
-          ),
 
       ],),
     );
+  }
+
+  Widget _crearAccion(IconData icon, String texto){
+    return Column(
+        children: <Widget>[
+          Icon(icon,color: Colors.blue,),
+          Text(texto,style: TextStyle(color: Colors.blue),)
+        ],
+      );
   }
 
 }
