@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/widgets_custom/accion.dart';
 
 class Inicio extends StatelessWidget {
   final titulo = TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0);
@@ -17,7 +18,7 @@ class Inicio extends StatelessWidget {
               children: <Widget>[
                 Image.network("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
                 _seccion1(),
-                _acciones(),
+                Accion(),
                 _crearTexto()
               ],
             ),
@@ -25,7 +26,6 @@ class Inicio extends StatelessWidget {
         )
       );
   }
-
 
   Widget _seccion1(){
     return  Container(
@@ -50,29 +50,7 @@ class Inicio extends StatelessWidget {
   }
   
 
-  Widget _acciones(){
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
 
-          _crearAccion(Icons.call,"Llamar"),
-          _crearAccion(Icons.near_me,"Ubicacion"),
-          _crearAccion(Icons.share,"Compartir"),
-
-
-      ],),
-    );
-  }
-
-  Widget _crearAccion(IconData icon, String texto){
-    return Column(
-        children: <Widget>[
-          Icon(icon,color: Colors.blue,),
-          Text(texto,style: TextStyle(color: Colors.blue),)
-        ],
-      );
-  }
 
   Widget _crearTexto(){
     return Container(
