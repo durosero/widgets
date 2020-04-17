@@ -18,7 +18,7 @@ class Inicio extends StatelessWidget {
               children: <Widget>[
                 Image.network("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
                 _seccion1(),
-                Accion(),
+                _acciones(),
                 _crearTexto()
               ],
             ),
@@ -49,6 +49,26 @@ class Inicio extends StatelessWidget {
           );
   }
   
+
+      Widget _acciones(){
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          
+             Accion(icon: Icons.call,texto: "Llamar",),
+             Accion(icon: Icons.near_me,texto: "Ubicacion",),
+             Accion(icon: Icons.share,texto: "Compartir",),
+
+          // _crearAccion(Icons.call,"Llamar"),
+          // _crearAccion(Icons.near_me,"Ubicacion"),
+          // _crearAccion(Icons.share,"Compartir"),
+
+
+      ],),
+    );
+  }
+
 
 
 

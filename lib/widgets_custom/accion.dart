@@ -1,36 +1,25 @@
 import 'package:flutter/material.dart';
 
 class Accion extends StatelessWidget{
+
+  IconData icon;
+  String  texto;
+
+  Accion({ @required this.icon, @required this.texto});
   
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      child: _acciones(),
+      child: _crearAccion(),
     );
   }
-
-
-    Widget _acciones(){
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-
-          _crearAccion(Icons.call,"Llamar"),
-          _crearAccion(Icons.near_me,"Ubicacion"),
-          _crearAccion(Icons.share,"Compartir"),
-
-
-      ],),
-    );
-  }
-
-  Widget _crearAccion(IconData icon, String texto){
+  
+  Widget _crearAccion(){
     return Column(
         children: <Widget>[
-          Icon(icon,color: Colors.blue,),
-          Text(texto,style: TextStyle(color: Colors.blue),)
+          Icon(this.icon,color: Colors.blue,),
+          Text(this.texto,style: TextStyle(color: Colors.blue),)
         ],
       );
   }
