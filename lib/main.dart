@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/view/inicio.dart';
+
  
 void main() => runApp(MyApp());
 

@@ -1,8 +1,8 @@
 # widgets
 
-A new Flutter project.
+Componentes en flutter.
 
-## Getting Started
+## Temas aplicados en la aplicacion
 
 This project is a starting point for a Flutter application.
 
