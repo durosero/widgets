@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/widgets_custom/accion.dart';
 
-class Inicio extends StatelessWidget {
+class Disenio extends StatelessWidget {
   final titulo = TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0);
   final subtitulo = TextStyle(color: Colors.grey, fontSize: 12.0);
 

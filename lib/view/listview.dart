@@ -24,8 +24,6 @@ class ListaView extends StatelessWidget {
     List<Widget> lista = new List<Widget>();
 
     for (var opt in numeros) {
-
-
       final tempWidget = ListTile(
           title: Text("Duvan Rosero"),
           subtitle: Text(opt ),
@@ -37,14 +35,11 @@ class ListaView extends StatelessWidget {
         );
         lista.add(tempWidget);
 
-      
     }
 
 
       return lista;
   }
-
-
 
     Widget _crearListaDinamica() {
     return ListView.separated(
