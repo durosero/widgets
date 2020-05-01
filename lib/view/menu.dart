@@ -20,6 +20,7 @@ class Menu extends StatelessWidget {
 
     return ListView(
       children: <Widget>[
+
          ListTile(
           title: Text("Diseños"),
      //    subtitle: Text("durosero@itp.edu.co"),
@@ -30,6 +31,19 @@ class Menu extends StatelessWidget {
           },
         ),
         Divider(),
+
+         ListTile(
+          title: Text("Lista"),
+     //    subtitle: Text("durosero@itp.edu.co"),
+          leading: Icon(Icons.list),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+           // Navigator.pushNamed(context, "lista");
+           Navigator.pushReplacementNamed(context, "lista");
+          },
+        ),
+        Divider(),
+
       ],
     );
   }

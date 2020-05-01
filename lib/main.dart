@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
      routes: {
        'menu': (context) => Menu(),
        'disenio': (context) => Disenio(),
+       'lista': (context) => ListaView(),
 
      },
     );
