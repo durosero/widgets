@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ListaView extends StatelessWidget {
 
-  
+  final numeros = ["UNO", "DOS", "TRES", "CUATRO", "CINCO"];
 
   
   @override
@@ -12,8 +12,36 @@ class ListaView extends StatelessWidget {
           appBar: AppBar(
             title: Text("List view"),
           ),
-          body: _crearListaDinamica()),
+          body: ListView(
+            children: _crearItem(),
+          )
+        ),
     );
+  }
+
+
+  List<Widget> _crearItem(){
+    List<Widget> lista = new List<Widget>();
+
+    for (var opt in numeros) {
+
+
+      final tempWidget = ListTile(
+          title: Text("Duvan Rosero"),
+          subtitle: Text(opt ),
+          leading: Icon(Icons.account_balance),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+            print("Tap..");
+          },
+        );
+        lista.add(tempWidget);
+
+      
+    }
+
+
+      return lista;
   }
 
 
@@ -21,11 +49,11 @@ class ListaView extends StatelessWidget {
     Widget _crearListaDinamica() {
     return ListView.separated(
       separatorBuilder:  (BuildContext context, int index) => Divider(),
-      itemCount: 50,
+      itemCount: numeros.length,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
           title: Text("Duvan Rosero"),
-          subtitle: Text("durosero@itp.edu.co"),
+          subtitle: Text(numeros[index]),
           leading: Icon(Icons.account_balance),
           trailing: Icon(Icons.keyboard_arrow_right),
           onTap: () {
