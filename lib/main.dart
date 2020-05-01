@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/view/inicio.dart';
+import 'package:widgets/view/listview.dart';
 
  
 void main() => runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Inicio()
+      home: ListaView()
     );
   }
 }
