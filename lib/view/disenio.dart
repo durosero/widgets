@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets_custom/accion.dart';
+import 'package:widgets/widgets/accion.dart';
 
 class Disenio extends StatelessWidget {
   final titulo = TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0);
