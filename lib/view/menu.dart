@@ -38,8 +38,8 @@ class Menu extends StatelessWidget {
           leading: Icon(Icons.list),
           trailing: Icon(Icons.keyboard_arrow_right),
           onTap: () {
-           // Navigator.pushNamed(context, "lista");
-           Navigator.pushReplacementNamed(context, "lista");
+           Navigator.pushNamed(context, "lista");
+          // Navigator.pushReplacementNamed(context, "lista");
           },
         ),
         Divider(),
