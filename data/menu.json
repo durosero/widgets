@@ -1,0 +1,24 @@
+{
+    "nombreApp": "Widgets",
+    "rutas": [{
+            "ruta": "disenio",
+            "icon": "account_balance",
+            "texto": "Diseños"
+        },
+        {
+            "ruta": "lista",
+            "icon": "list",
+            "texto": "Listas"
+        },
+        {
+            "ruta": "imagenes",
+            "icon": "image",
+            "texto": "Imagenes"
+        },
+        {
+            "ruta": "alertas",
+            "icon": "add_alert",
+            "texto": "Alerta - Modal - Dialog"
+        }
+    ]
+}
