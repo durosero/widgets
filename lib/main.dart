@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/view/alertas.dart';
 import 'package:widgets/view/disenio.dart';
+import 'package:widgets/view/imagenes.dart';
 import 'package:widgets/view/listview.dart';
 import 'package:widgets/view/menu.dart';
 
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
        'menu': (context) => Menu(),
        'disenio': (context) => Disenio(),
        'lista': (context) => ListaView(),
+       'alertas' : (context) => Alertas(),
+       'imagenes' : (context) => Imagenes()
 
      },
     );

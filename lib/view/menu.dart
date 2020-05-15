@@ -44,6 +44,30 @@ class Menu extends StatelessWidget {
         ),
         Divider(),
 
+           ListTile(
+          title: Text("Imagenes"),
+     //    subtitle: Text("durosero@itp.edu.co"),
+          leading: Icon(Icons.list),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+           Navigator.pushNamed(context, "imagenes");
+          // Navigator.pushReplacementNamed(context, "lista");
+          },
+        ),
+        Divider(),
+
+           ListTile(
+          title: Text("Alertas"),
+     //    subtitle: Text("durosero@itp.edu.co"),
+          leading: Icon(Icons.list),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+           Navigator.pushNamed(context, "alertas");
+          // Navigator.pushReplacementNamed(context, "lista");
+          },
+        ),
+        Divider(),
+
       ],
     );
   }
