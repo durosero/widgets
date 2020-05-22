@@ -4,13 +4,14 @@ import 'package:widgets/widgets/accion.dart';
 class Disenio extends StatelessWidget {
   final titulo = TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0);
   final subtitulo = TextStyle(color: Colors.grey, fontSize: 12.0);
-
+  String tituloApbar = "";
   @override
   Widget build(BuildContext context) {
+    tituloApbar = ModalRoute.of(context).settings.arguments;
   
     return Scaffold(
         appBar: AppBar(
-          title: Text('Material App Bar'),
+          title: Text(tituloApbar),
         ),
         body: SingleChildScrollView(
                   child: Container(

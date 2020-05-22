@@ -5,12 +5,15 @@ class Alertas extends StatefulWidget {
   _AlertasState createState() => _AlertasState();
 }
 
+
 class _AlertasState extends State<Alertas> {
+  String tituloApbar ="";
   @override
   Widget build(BuildContext context) {
+    tituloApbar = ModalRoute.of(context).settings.arguments;
     return Scaffold(
     appBar: AppBar(
-        title: Text("Dialog"),
+        title: Text(tituloApbar),
       ),
       body: _crearBotton(context),
     );

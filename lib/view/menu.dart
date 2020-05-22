@@ -41,7 +41,8 @@ class Menu extends StatelessWidget {
         leading: getIcon(opt['icon']),
         trailing: Icon(Icons.keyboard_arrow_right),
         onTap: () {
-          Navigator.pushNamed(context, opt['ruta']);
+          print(opt['texto']);
+          Navigator.pushNamed(context, opt['ruta'],arguments: opt['texto']);
           // Navigator.pushReplacementNamed(context, "lista");
         },
       );

@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 class ListaView extends StatelessWidget {
 
   final numeros = ["UNO", "DOS", "TRES", "CUATRO", "CINCO"];
-
+  String tituloApbar = "";
   
   @override
   Widget build(BuildContext context) {
+        tituloApbar = ModalRoute.of(context).settings.arguments;
     return Container(
       child: Scaffold(
           appBar: AppBar(
-            title: Text("List view"),
+            title: Text(tituloApbar),
           ),
           body: ListView(
             children: _crearItem(),
