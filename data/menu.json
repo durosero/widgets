@@ -19,6 +19,11 @@
             "ruta": "alertas",
             "icon": "add_alert",
             "texto": "Alerta - Modal - Dialog"
+        },
+        {
+            "ruta": "httget",
+            "icon": "cloud",
+            "texto": "HTTP"
         }
     ]
 }

@@ -1,90 +1,66 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:widgets/provider/mensaje_provider.dart';
+import 'package:widgets/provider/login_provider.dart';
 
-class HttpGet extends StatefulWidget {
+
+class Httpget extends StatefulWidget {
   @override
-  _HttpGetState createState() => _HttpGetState();
+  _HttpgetState createState() => _HttpgetState();
 }
 
-class _HttpGetState extends State<HttpGet> {
-  String datos = "";
-  final msjProvider = new MensajeProvider();
+class _HttpgetState extends State<Httpget> {
+  final loginProvider = new LoginProvider();
   TextEditingController userController = new TextEditingController();
   TextEditingController passController = new TextEditingController();
-  String msj = "";
+
+  String  texto  = "";
 
   @override
   Widget build(BuildContext context) {
-    final texto = ModalRoute.of(context).settings.arguments;
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(texto.toString()),
+          title: Text("Http"),
         ),
         body: Container(
-          padding: EdgeInsets.all(30.0),
+          margin: EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
+
               TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0)),
-                    hintText: "Usuario"),
                 controller: userController,
               ),
-              SizedBox(
-                height: 10.0,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0)),
-                    hintText: "Contraseña"),
-                controller: passController,
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    child: RaisedButton(
-                      child: Text("Autenticar"),
-                      onPressed: _login,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(msj)
+              Container(height: 10.0),
+               TextField(
+                 controller: passController,
+               ),
+
+
+            //  Text(texto),
+
+              RaisedButton(
+                child: Text('Iniciar sesión'),
+                onPressed: (){
+                  // loginProvider.getMensaje().then((data){
+                  //   setState(() {
+                  //     texto = data['developer'];
+                  //   });
+                  // });
+
+                  loginProvider.login(userController.text, passController.text).then((data){
+                   
+                   
+                    print(data);
+                  });
+
+                  print(userController.text);
+                },
+                color: Colors.blue,
+              )
             ],
           ),
         ),
       ),
+      
     );
-  }
-
-  void _login() {
-    print(userController.text);
-
-    msjProvider.login(userController.text, passController.text).then((data) {
-      setState(() {
-        msj = data['message'];
-      });
-    });
-  }
-
-  void _getData() {
-    print("Cargando..");
-
-    msjProvider.getMensaje().then((data) {
-      setState(() {
-        datos = json.encode(data);
-      });
-    });
   }
 }

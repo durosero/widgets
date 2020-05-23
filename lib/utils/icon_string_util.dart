@@ -4,7 +4,8 @@ final _icons = <String, IconData>{
   'account_balance' : Icons.account_balance,
   'list' : Icons.list,
   'image' : Icons.image,
-  'add_alert' : Icons.add_alert
+  'add_alert' : Icons.add_alert,
+  'cloud' : Icons.cloud
 };
 
 Icon getIcon(String nombreIcono){
